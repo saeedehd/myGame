@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core'; 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'; 
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { CardComponent } from './card/card.component';
+import { BoardComponent } from './board/board.component';
+import { PlayerComponent } from './player/player.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -13,7 +16,10 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardComponent,
+    BoardComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
