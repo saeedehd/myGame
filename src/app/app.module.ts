@@ -9,6 +9,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { CardComponent } from './card/card.component';
 import { BoardComponent } from './board/board.component';
 import { PlayerComponent } from './player/player.component';
+import { LayoutComponent } from './layout/layout.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -19,7 +20,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     CardComponent,
     BoardComponent,
-    PlayerComponent
+    PlayerComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
