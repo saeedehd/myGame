@@ -11,17 +11,34 @@ import { BoardComponent } from './board/board.component';
 import { PlayerComponent } from './player/player.component';
 import { HomeComponent } from './home/home.component';
 import { StartGameComponent } from './start-game/start-game.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { MatCardModule, MatButtonModule, MatIconModule, MatDialogModule } from '@angular/material';
+import {
+	MatCardModule,
+	MatButtonModule,
+	MatIconModule,
+	MatDialogModule,
+	MatFormFieldModule,
+	MatInputModule
+} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EntranceComponent } from './entrance/entrance.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-	declarations: [ AppComponent, CardComponent, BoardComponent, PlayerComponent, HomeComponent, StartGameComponent ],
+	declarations: [
+		AppComponent,
+		CardComponent,
+		BoardComponent,
+		PlayerComponent,
+		HomeComponent,
+		StartGameComponent,
+		EntranceComponent
+	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -31,6 +48,10 @@ export function HttpLoaderFactory(http: HttpClient) {
 		MatButtonModule,
 		MatIconModule,
 		MatDialogModule,
+		MatFormFieldModule,
+		MatInputModule,
+		FormsModule,
+		ReactiveFormsModule,
 
 		TranslateModule.forRoot({
 			loader: {

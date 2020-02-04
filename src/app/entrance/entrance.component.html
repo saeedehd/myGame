@@ -1,0 +1,20 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="container">
+<mat-card fxFlex="300px">
+      <mat-card-content>
+        <div fxLayout="column" fxLayoutAlign="space-around center">
+            <div fxFlex>
+                <img fxFlex="50px" fxFlexAlign="center" src="https://www.pngkey.com/png/detail/68-681178_hand-holding-playing-cards-svg-png-icon-free.png" alt="Avatar">
+            </div>
+            <div fxFlex>
+                <mat-form-field>
+                    <input matInput placeholder="Enter your name" [formControl]="username" required>
+                  </mat-form-field>
+            </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions >
+        <button fxFill type="button" (click)="submit()" mat-raised-button color="primary">Enter</button>
+      </mat-card-actions>
+</mat-card>
+  
+</div>

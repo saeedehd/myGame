@@ -1,1 +1,16 @@
-<p>start-game works!</p>
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="30px"> 
+    <div fxFill>
+        <button mat-raised-button color="primary" fxFill>New Game</button>
+    </div>
+    <div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="center center">
+        <div fxFlex>
+            <mat-form-field>
+                <input matInput placeholder="Game ID">
+            </mat-form-field>
+        </div>
+        
+        <div fxFlex>
+            <button mat-raised-button color="primary">Join</button>
+        </div>
+    </div>
+</div>
