@@ -1,1 +1,8 @@
-<h1>{{title}}</h1>
+<div id="con" fxLayout="column" fxLayoutAlign="start">
+    <div fxFlex fxLayout="row">
+        <div fxFlex="nogrow">
+            <button mat-raised-button fxFlex="grow"><mat-icon fill="none">home</mat-icon></button>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
