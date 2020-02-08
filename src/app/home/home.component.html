@@ -1,20 +1,29 @@
 <div id="con" fxLayout="column" fxLayoutAlign="start">
-    <div fxFlex="grow" fxLayout="row" fxLayoutAlign='center center'>
+    <div fxFlex="grow" fxLayout="column" fxLayoutAlign='center center' fxLayoutGap="50px">
+        <div fxFlex="nogrow" fxLayout="row" fxLayoutGap="30px">
+            <mat-form-field appearance="outline">
+                <mat-label>Join Current Game</mat-label>
+                <input matInput placeholder="Game ID">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="join()">Join</button>
+        </div>
         <div fxFlex="nogrow" fxLayout="row" fxLayoutGap="50px">
             <div fxFlex="nogrow">
                 <mat-card>
-                    <button mat-raised-button color="primary" (click)="openDialog()">Durak</button>
+                    <button mat-raised-button color="primary" (click)="openDialog('Durak')">Durak</button>
                     
                 </mat-card>
             </div>
             <div fxFlex="nogrow">
                 <mat-card>
-                    <button mat-raised-button color="primary" (click)="openDialog()">Poker</button>
+                    <button mat-raised-button color="primary" (click)="openDialog('Poker')">Poker</button>
                 </mat-card>
             </div>
             <div fxFlex="nogrow">
                 <mat-card>
-                    <button mat-raised-button color="primary" (click)="openDialog()">Whist</button>
+                    <button mat-raised-button color="primary" (click)="openDialog('Whist')">Whist</button>
                 </mat-card>
             </div>
         </div>

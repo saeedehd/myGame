@@ -1,8 +1,19 @@
 <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="30px"> 
+    <div>
+        {{dialogTitle}}
+    </div>
+    <div fxFill>
+        <mat-form-field appearance="legacy">
+            <mat-label>New Game!</mat-label>
+            <input matInput placeholder="Game ID" [value]="gameId" disabled>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>ID for joining another player</mat-hint>
+          </mat-form-field>
+    </div>
     <div fxFill>
         <button mat-raised-button color="primary" fxFill>New Game</button>
     </div>
-    <div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="center center">
+    <!-- <div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="center center">
         <div fxFlex>
             <mat-form-field>
                 <input matInput placeholder="Game ID">
@@ -12,5 +23,5 @@
         <div fxFlex>
             <button mat-raised-button color="primary">Join</button>
         </div>
-    </div>
+    </div> -->
 </div>

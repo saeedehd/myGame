@@ -24,6 +24,7 @@ import {
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EntranceComponent } from './entrance/entrance.component';
+import { DurakComponent } from './durak/durak.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,7 +38,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 		PlayerComponent,
 		HomeComponent,
 		StartGameComponent,
-		EntranceComponent
+		EntranceComponent,
+		DurakComponent
 	],
 	imports: [
 		BrowserModule,

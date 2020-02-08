@@ -10,8 +10,12 @@ import { StartGameComponent } from '../start-game/start-game.component';
 export class HomeComponent implements OnInit {
 	constructor(public dialog: MatDialog) {}
 
-	openDialog(): void {
-		const dialogRef = this.dialog.open(StartGameComponent, { data: {} });
+	openDialog(gameName: string): void {
+		const dialogRef = this.dialog.open(StartGameComponent, {
+			data: {
+				dialogTitle: gameName
+			}
+		});
 
 		dialogRef.afterClosed().subscribe((result) => {
 			console.log('The dialog was closed');
